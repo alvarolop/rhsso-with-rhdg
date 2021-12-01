@@ -35,6 +35,10 @@ This project describes how to deploy a Red Hat Single Sign-On (RH-SSO) instance 
 Red Hat Single Sign-On is an integrated sign-on solution available as a Red Hat JBoss Middleware for OpenShift containerized image. The Red Hat Single Sign-On for OpenShift image provides an authentication server for users to centrally log in, log out, register, and manage user accounts for web applications, mobile applications, and RESTful web services.
 
 
+
+
+
+
 == Installing RH-SSO with the operator
 
 
@@ -92,7 +96,35 @@ https://access.redhat.com/documentation/en-us/red_hat_single_sign-on/7.5/html-si
 
 
 
-== Additional documentation
+
+
+
+== Installing RHDG using the operator
+
+This is covered in another repository, so please, go to https://github.com/alvarolop/rhdg8-server#deploying-rhdg-on-ocp-using-the-operator[this repository] and install it manually or using the `auto-install.sh` script.
+
+
+
+
+
+
+
+
+== Configuring Cross-Datacenter Replication Mode in RH-SSO
+
+[NOTE]
+====
+https://access.redhat.com/documentation/en-us/red_hat_single_sign-on/7.5/html-single/server_installation_and_configuration_guide/index#crossdc-mode[Link to the official documentation].
+====
+
+
+
+
+
+
+:sectnums!:
+
+== Annex: Additional documentation
 
 * Varsha Sharma's https://developers.redhat.com/blog/2021/04/23/integrate-red-hat-data-grid-and-red-hats-single-sign-on-technology-on-red-hat-openshift[blog post] about this integration 
 
