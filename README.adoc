@@ -27,13 +27,67 @@ toc::[]
 
 == Introduction
 
-This project describes how to deploy a Red Hat Single Sign-On (RHSSO) instance on Openshift that uses Red Hat Data Grid (RHDG) for the replication of data between the data centers.
+This project describes how to deploy a Red Hat Single Sign-On (RH-SSO) instance on Openshift that uses Red Hat Data Grid (RHDG) for the replication of data between the data centers.
 
 
 == Red Hat Single Sign-On
 
 Red Hat Single Sign-On is an integrated sign-on solution available as a Red Hat JBoss Middleware for OpenShift containerized image. The Red Hat Single Sign-On for OpenShift image provides an authentication server for users to centrally log in, log out, register, and manage user accounts for web applications, mobile applications, and RESTful web services.
 
+
+== Installing RH-SSO with the operator
+
+
+[NOTE]
+====
+https://access.redhat.com/documentation/en-us/red_hat_single_sign-on/7.5/html-single/server_installation_and_configuration_guide/index#operator[Link to the official documentation].
+====
+
+A Kubernetes Operator based on the Operator SDK for installing and managing Red Hat Single Sign-On.
+
+Install the RH-SSO operator using the template provided in this git repository:
+
+[source, bash]
+----
+oc process -f rhsso-operator/rhsso-01-operator.yaml | oc apply -f -
+----
+
+This operator installs five different CRDs that you can use to customize your RH-SSO installation:
+
+* *Keycloak*: Represents a Red Hat Single Sign-On Instance.
+* *KeycloakRealm*: Represents a Red Hat Single Sign-On Realm.
+* *KeycloakBackup*: Represents a Red Hat Single Sign-On Backup.
+* *KeycloakClient*: Represents a Red Hat Single Sign-On Client.
+* *KeycloakUser*: Represents a Red Hat Single Sign-On User.
+
+=== Keycloak instance
+
+
+
+=== Keycloak Realm
+
+
+
+=== Keycloak Backup
+
+
+
+=== Keycloak Client
+
+
+
+=== Keycloak User
+
+
+
+
+
+== Installing RH-SSO using OCP templates
+
+[NOTE]
+====
+https://access.redhat.com/documentation/en-us/red_hat_single_sign-on/7.5/html-single/red_hat_single_sign-on_for_openshift_on_openjdk/index[Link to the official documentation].
+====
 
 
 
@@ -44,4 +98,6 @@ Red Hat Single Sign-On is an integrated sign-on solution available as a Red Hat 
 
 * https://access.redhat.com/documentation/en-us/red_hat_single_sign-on/7.5[RHSSO documentation].
 * https://www.keycloak.org/[Keycloak documentation].
+* https://github.com/keycloak/keycloak-operator[Keycloak operator documentation].
 * https://access.redhat.com/documentation/en-us/red_hat_data_grid/8.2[RHDG documentation].
+* https://access.redhat.com/solutions/3296901[RH-SSO Release History].
