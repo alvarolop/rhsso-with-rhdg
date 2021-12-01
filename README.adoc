@@ -1,0 +1,47 @@
+= Red Hat Single Sign-On integration with Red Hat Data Grid
+Álvaro López Medina <alopezme@redhat.com>
+v1.0, 2021-12
+// Create TOC wherever needed
+:toc: macro
+:sectanchors:
+:sectnumlevels: 2
+:sectnums: 
+:source-highlighter: pygments
+:imagesdir: images
+// Start: Enable admonition icons
+ifdef::env-github[]
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+endif::[]
+ifndef::env-github[]
+:icons: font
+endif::[]
+// End: Enable admonition icons
+
+
+// Create the Table of contents here
+toc::[]
+
+== Introduction
+
+This project describes how to deploy a Red Hat Single Sign-On (RHSSO) instance on Openshift that uses Red Hat Data Grid (RHDG) for the replication of data between the data centers.
+
+
+== Red Hat Single Sign-On
+
+Red Hat Single Sign-On is an integrated sign-on solution available as a Red Hat JBoss Middleware for OpenShift containerized image. The Red Hat Single Sign-On for OpenShift image provides an authentication server for users to centrally log in, log out, register, and manage user accounts for web applications, mobile applications, and RESTful web services.
+
+
+
+
+
+== Additional documentation
+
+* Varsha Sharma's https://developers.redhat.com/blog/2021/04/23/integrate-red-hat-data-grid-and-red-hats-single-sign-on-technology-on-red-hat-openshift[blog post] about this integration 
+
+* https://access.redhat.com/documentation/en-us/red_hat_single_sign-on/7.5[RHSSO documentation].
+* https://www.keycloak.org/[Keycloak documentation].
+* https://access.redhat.com/documentation/en-us/red_hat_data_grid/8.2[RHDG documentation].
